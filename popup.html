@@ -2,16 +2,12 @@
 <html>
 <head>
   <title>PDF Filter Toggle</title>
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval'">
 </head>
 <body>
   <h1>PDF Filter Toggle</h1>
   <button id="toggleFilter">Toggle Filter</button>
-  <script>
-    document.getElementById('toggleFilter').addEventListener('click', function() {
-      chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-        chrome.tabs.executeScript(tabs[0].id, {file: 'content.js'});
-      });
-    });
-  </script>
+  <script src="script.js"></script>
+
 </body>
 </html>

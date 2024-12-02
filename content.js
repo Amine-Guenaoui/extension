@@ -1,5 +1,6 @@
 /* PDF - toggle filter invert */
 (function(){
+    console.log("HELLO WORLD");
     var L='style_PDFI',
         S='#viewerContainer>#viewer.pdfViewer>.page{filter: invert(100%)}',
         SS,
