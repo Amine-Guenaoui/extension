@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PDF Filter Toggle</title>
+</head>
+<body>
+  <h1>PDF Filter Toggle</h1>
+  <button id="toggleFilter">Toggle Filter</button>
+  <script>
+    document.getElementById('toggleFilter').addEventListener('click', function() {
+      chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+        chrome.tabs.executeScript(tabs[0].id, {file: 'content.js'});
+      });
+    });
+  </script>
+</body>
+</html>
